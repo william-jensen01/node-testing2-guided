@@ -42,11 +42,12 @@ describe('Hobbits model', () => {
       // ?
       // using db, get a hobbit in the database
       const [id] = await db('hobbits').insert(frodo)
-      await Hobbit.update(id, { name: 'FRODO' })
-      const updated = db('hobbits').where({ id }).first()
       // await for the update of said hobbit
+      await Hobbit.update(id, { name: 'FRODO' })
       // using db, retrieve the hobbit
+      const updated = db('hobbits').where({ id }).first()
       // check the change took
+      expect(updated.name).toBe('FRODO')
     })
     it('resolves to the updated hobbit', () => {
       // ?
