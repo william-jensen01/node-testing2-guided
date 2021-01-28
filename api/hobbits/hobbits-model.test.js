@@ -33,7 +33,7 @@ describe('Hobbits model', () => {
       expect(all).toHaveLength(2)
     })
     it('resolves to the added hobbit', () => {
-      
+      // ?
     })
   })
 })
