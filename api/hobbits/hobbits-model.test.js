@@ -34,10 +34,10 @@ describe('Hobbits model', () => {
     })
     it('resolves to the hobbit', async() => {
       const hobbit = await Hobbit.insert(frodo)
-      expect(hobbit).toMatchObject(frodo)
+      expect(hobbit).toMatchObject({ id: 1, ...frodo })
     })
   })
   describe('update function', () => {
-    it('updates the hobbit')
+    // it('updates the hobbit')
   })
 })
