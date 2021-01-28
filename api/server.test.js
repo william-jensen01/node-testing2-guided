@@ -25,7 +25,7 @@ describe('server', () => {
     it('returns the right num of hobbits', async () => {
       await db('hobbits').insert(frodo)
       const res = await request(server).get('/hobbits')
-      expect(res).toEqual({})
+      expect(res.body).tohavel
     })
   })
 })
