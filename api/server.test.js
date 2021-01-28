@@ -40,4 +40,7 @@ describe('server', () => {
       expect(res.body[1]).toMatchObject({ id: 2, ...sam })
     })
   })
+  describe('[POST] /hobbits', () => {
+    it('')
+  })
 })
