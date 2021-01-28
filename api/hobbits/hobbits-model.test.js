@@ -42,6 +42,7 @@ describe('Hobbits model', () => {
       // ?
       // using db, get a hobbit in the database
       const [id] = await db('hobbits').insert(frodo)
+      await Hobbit.update(id, { name: 'FRODO' })
       const updated = db('hobbits').where({ id }).first()
       // await for the update of said hobbit
       // using db, retrieve the hobbit
