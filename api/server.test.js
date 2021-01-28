@@ -34,8 +34,10 @@ describe('server', () => {
     })
     it('returns the right hobbits', async () => {
       await db('hobbits').insert(frodo)
+      await db('hobbits').insert(sam)
       const res = await request(server).get('/hobbits')
-      expect(res.body[0]).toMatchObject()
+      expect(res.body[0]).toMatchObject({ id: 1, ...frodo })
+      expect(res.body[1]).toMatchObject({ id: 2, ...sam })
     })
   })
 })
