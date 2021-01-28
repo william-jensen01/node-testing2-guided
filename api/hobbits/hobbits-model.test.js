@@ -25,7 +25,7 @@ describe('Hobbits model', () => {
     it('adds hobbits to db', async () => {
       await Hobbit.insert(frodo)
       const all = await db('hobbits')
-      
+      expect(all).toHaveLength(1)
     })
   })
 })
