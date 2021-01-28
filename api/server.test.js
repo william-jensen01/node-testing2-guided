@@ -32,5 +32,8 @@ describe('server', () => {
       res = await request(server).get('/hobbits')
       expect(res.body).toHaveLength(2)
     })
+    it('returns the right hobbits', async () => {
+
+    })
   })
 })
