@@ -19,6 +19,6 @@ afterAll(async () => {
 
 describe('Hobbits model', () => {
   describe('insert function', () => {
-    it('')
+    it('adds hobbits to db')
   })
 })
