@@ -42,9 +42,12 @@ describe('server', () => {
   })
   describe('[POST] /hobbits', () => {
     it('responds with the newly created hobbit', async () => {
-      // request(server).post('/hobbits').send({})
-      const res = await request(server).post("/hobbits").send(frodo)
-      expect(res.body[0]).toMatchObject({ id: 1, name: 'frodo' })
+      let res
+      res = await request(server).post("/hobbits").send(frodo)
+      expect(res.body).toMatchObject({ id: 1, ...frodo })
+
+      res = await request(server).post("/hobbits").send(sam)
+      expect(res.body).toMatchObject({ id: 2, ...sam })
     })
   })
 })
