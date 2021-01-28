@@ -37,5 +37,7 @@ describe('Hobbits model', () => {
       expect(hobbit).toMatchObject(frodo)
     })
   })
-  describe('update function', )
+  describe('update function', () => {
+    it('updates the hobbit')
+  })
 })
