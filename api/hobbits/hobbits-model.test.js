@@ -6,4 +6,6 @@ it('is the correct env', () => {
 const Hobbit = require('./hobbits-model')
 const db = require('../../data/dbConfig')
 
-
+beforeAll(async () => {
+  await db.migrate.rollback()
+})
