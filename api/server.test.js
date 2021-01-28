@@ -22,5 +22,8 @@ describe('server', () => {
       const res = await request(server).get('/hobbits')
       expect(res.status).toBe(200)
     })
+    it('returns the right num of hobbits', () => {
+      // 
+    })
   })
 })
