@@ -41,7 +41,7 @@ describe('Hobbits model', () => {
     it('updates the hobbit', async () => {
       // ?
       // using db, get a hobbit in the database
-      await db('hobbitsw')
+      await db('hobbits').insert(frodo)
       // await for the update of said hobbit
       // using db, retrieve the hobbit
       // check the change took
