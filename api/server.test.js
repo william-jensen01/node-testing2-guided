@@ -1,2 +1,5 @@
 const request = require('supertest')
-const db 
+const db = require('../data/dbConfig')
+const server = require('./server')
+
+
