@@ -18,10 +18,6 @@ afterAll(async () => {
 
 describe('server', () => {
   describe('[GET] /hobbits', () => {
-    beforeEach(async () => {
-      await db('hobbits').insert(frodo)
-      await db('hobbits').insert(sam)
-    })
     it('responds with 200 OK', async () => {
       const res = await request(server).get('/hobbits')
       expect(res.status).toBe(200)
