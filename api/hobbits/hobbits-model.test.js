@@ -32,8 +32,9 @@ describe('Hobbits model', () => {
       all = await db('hobbits')
       expect(all).toHaveLength(2)
     })
-    it('resolves to the added hobbit', async() => {
-      await Hobbit.insert(frodo)
+    it('resolves to the hobbit', async() => {
+      const hobbit = await Hobbit.insert(frodo)
+      expect(newHobbit.name).toEqual("frodo");
     })
   })
 })
