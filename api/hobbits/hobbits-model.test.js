@@ -4,4 +4,6 @@ it('is the correct env', () => {
 })
 
 const Hobbit = require('./hobbits-model')
+const db = require('../../data/dbConfig')
+
 
