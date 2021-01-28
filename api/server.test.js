@@ -17,5 +17,7 @@ afterAll(async () => {
 })
 
 describe('server', () => {
-  
+  describe('[GET] /hobbits', () => {
+    it('responds with 200 OK')
+  })
 })
