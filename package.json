@@ -8,7 +8,7 @@
     "migrate": "knex migrate:latest",
     "seed": "knex seed:run",
     "ketchup": "git fetch && git reset --hard origin/lecture",
-    "test": "FOO=bar jest --watchAll --verbose --runInBand"
+    "test": "cross-env DB_ENV=testing jest --watchAll --verbose --runInBand"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
