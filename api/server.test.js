@@ -22,8 +22,10 @@ describe('server', () => {
       const res = await request(server).get('/hobbits')
       expect(res.status).toBe(200)
     })
-    it('returns the right num of hobbits', () => {
-      // 
+    it('returns the right num of hobbits', async () => {
+      await db('hobbits').insert(frodo)
+      const res = await request(server).get('/hobbits')
+      ?? ?
     })
   })
 })
