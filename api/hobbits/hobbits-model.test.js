@@ -32,7 +32,7 @@ describe('Hobbits model', () => {
       all = await db('hobbits')
       expect(all).toHaveLength(2)
     })
-    it('resolves to the hobbit', async() => {
+    it('resolves to the hobbit', async () => {
       const hobbit = await Hobbit.insert(frodo)
       expect(hobbit).toMatchObject({ id: 1, ...frodo })
     })
@@ -41,7 +41,8 @@ describe('Hobbits model', () => {
     it('updates the hobbit', async () => {
       // ?
       // using db, get a hobbit in the database
-      await db('hobbits').insert(frodo)
+      const [id] = await db('hobbits').insert(frodo)
+      const updated = db('hobbits').where({ id }).first()
       // await for the update of said hobbit
       // using db, retrieve the hobbit
       // check the change took
