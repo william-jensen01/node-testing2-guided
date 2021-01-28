@@ -32,5 +32,6 @@ describe('Hobbits model', () => {
       all = await db('hobbits')
       expect(all).toHaveLength(2)
     })
+    it('resolves to the added hobbit')
   })
 })
