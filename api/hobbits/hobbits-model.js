@@ -25,7 +25,8 @@ async function insert(hobbit) {
 }
 
 async function update(id, changes) {
-  return null
+  return db('hobbits').update(changes)
+    .where({ id })
 }
 
 function remove(id) {
