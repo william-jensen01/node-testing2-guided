@@ -45,7 +45,7 @@ describe('Hobbits model', () => {
       // await for the update of said hobbit
       await Hobbit.update(id, { name: 'FRODO' })
       // using db, retrieve the hobbit
-      const updated = db('hobbits').where({ id }).first()
+      const updated = await db('hobbits').where({ id }).first()
       // check the change took
       expect(updated.name).toBe('FRODO')
     })
