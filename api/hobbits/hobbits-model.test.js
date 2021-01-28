@@ -23,7 +23,12 @@ afterAll(async () => {
 describe('Hobbits model', () => {
   describe('insert function', () => {
     it('adds hobbits to db', async () => {
+      let all
       await Hobbit.insert(frodo)
+      all = await db('hobbits')
+      expect(all).toHaveLength(1)
+
+      await Hobbit.insert(sam)
       const all = await db('hobbits')
       expect(all).toHaveLength(1)
     })
