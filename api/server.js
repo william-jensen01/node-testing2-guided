@@ -25,7 +25,13 @@ server.get("/hobbits/id", (req, res) => {
 });
 
 server.post("/hobbits", (req, res) => {
-  res.end()
+  Hobbits.insert()
+  .then(hobbits => {
+    res.status(200).json(hobbits);
+  })
+  .catch(error => {
+    res.status(500).json(error);
+  });
 });
 
 server.delete("/hobbits/:id", (req, res) => {
