@@ -6,6 +6,9 @@ it('is the correct env', () => {
 const Hobbit = require('./hobbits-model')
 const db = require('../../data/dbConfig')
 
+const frodo = { name: 'frodo' }
+const sam = { name: 'sam' }
+
 beforeAll(async () => {
   await db.migrate.rollback()
   await db.migrate.latest()
@@ -20,7 +23,7 @@ afterAll(async () => {
 describe('Hobbits model', () => {
   describe('insert function', () => {
     it('adds hobbits to db', () => {
-      Hobbit
+      Hobbit.insert(frodo).then
     })
   })
 })
