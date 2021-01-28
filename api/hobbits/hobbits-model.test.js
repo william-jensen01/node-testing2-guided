@@ -41,6 +41,16 @@ describe('Hobbits model', () => {
     it('updates the hobbit', () => {
       // ?
       // using db, get a hobbit in the database
+      // await for the update of said hobbit
+      // using db, retrieve the hobbit
+      // check the change took
+    })
+    it('updates the hobbit', () => {
+      // ?
+      // using db, get a hobbit in the database
+      // await for the update of said hobbit
+      // using db, retrieve the hobbit
+      // check the change took
     })
   })
 })
