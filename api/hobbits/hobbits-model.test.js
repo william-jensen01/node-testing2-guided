@@ -45,12 +45,11 @@ describe('Hobbits model', () => {
       // using db, retrieve the hobbit
       // check the change took
     })
-    it('updates the hobbit', () => {
+    it('resolves to the updated hobbit', () => {
       // ?
       // using db, get a hobbit in the database
-      // await for the update of said hobbit
-      // using db, retrieve the hobbit
-      // check the change took
+      // await for the update of said hobbit save in var
+      // check that the var contains h with the updates
     })
   })
 })
