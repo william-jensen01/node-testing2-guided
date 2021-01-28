@@ -29,8 +29,8 @@ describe('Hobbits model', () => {
       expect(all).toHaveLength(1)
 
       await Hobbit.insert(sam)
-      const all = await db('hobbits')
-      expect(all).toHaveLength(1)
+      all = await db('hobbits')
+      expect(all).toHaveLength(2)
     })
   })
 })
