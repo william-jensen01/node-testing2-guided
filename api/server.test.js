@@ -33,7 +33,9 @@ describe('server', () => {
       expect(res.body).toHaveLength(2)
     })
     it('returns the right hobbits', async () => {
-      // ?
+      await db('hobbits').insert(frodo)
+      const res = await request(server).get('/hobbits')
+      expect(res.body[0]).toMatchObject()
     })
   })
 })
